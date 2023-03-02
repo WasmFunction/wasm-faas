@@ -10,6 +10,25 @@
 * CRI + WASM相关技术调研，产出结果：研究报告文档，负责人：严炼
 * Fission性能评测结果的复现，产出结果：Demo和重现技术文档
 
+### Docs
+
+- [WebAssembly调研相关结果（演示文稿/md文档）](./doc/web_assembly)
+- [K8s调研相关结果（演示文稿/md文档）](./doc/k8s)
+- [Fission调研相关结果（演示文稿/md文档）](./doc/fission)
+- [Containerd调研相关结果（演示文稿/md文档）](./doc/containerd)
+
+Tip: 各文档目录下md文档与演示文稿的存放结构
+
+```text
+|_ md (md文档）
+|_ original keynote（存放keynote演示文稿）
+|  |
+|  |__ *.key（keynote演示文稿）
+|
+|_ *.pdf（由original keynote目录中的keynote演示文稿导出，方便非mac用户查看）
+|_ *.ppt / *.pptx（ppt演示文稿）
+```
+
 ### Links
 
 * https://github.com/kubernetes/kubernetes
