@@ -33,7 +33,7 @@
 
   
 
-![](./src/cri-o_containerd/cri-o-arch.png)
+![](./src/cri-o-containerd/cri-o-arch.png)
 
 **cri-o调用流程**
 
@@ -55,7 +55,7 @@
 
 8. 网络是通过 **CNI** 接口设置的，所以任何 CNI 插件都可以与 CRI-O 一起使用。
 
-![](./src/cri-o_containerd/cri-o-components.jfif)
+![](./src/cri-o-containerd/cri-o-components.jfif)
 
 **slices**
 
@@ -77,7 +77,7 @@
 - [containerd/architecture.md at main · containerd/containerd (github.com)](https://github.com/containerd/containerd/blob/main/docs/cri/architecture.md)
 - [Talk about containerd](https://www.jianshu.com/p/edc572533518)
 
-![](./src/cri-o_containerd/cri-containerd-arch.png)
+![](./src/cri-o-containerd/cri-containerd-arch.png)
 
 **pod 创建过程**
 
@@ -89,7 +89,7 @@
 - kubelet 再通过 cri runtime service 接口调用 cri 使用所拉取镜像在 pod 内创建并运行容器。
 - 最后 cri 使用 containerd 创建 应用容器，并放至 pod 的 cgroups 和 namespace 内。
 
-![](./src/cri-o_containerd/containerd-arch.png)
+![](./src/cri-o-containerd/containerd-arch.png)
 
 **kubelet 通过 cri 调用 containerd 启动容器过程**
 
@@ -113,7 +113,7 @@ containerd以插件的方式来保证其内部实现的低耦合性，稳定性�
 
 **containerd 内置插件**
 
-![](./src/cri-o_containerd/containerd-plugins.png)
+![](./src/cri-o-containerd/containerd-plugins.png)
 
 **插件配置**
 
@@ -121,7 +121,7 @@ containerd以插件的方式来保证其内部实现的低耦合性，稳定性�
 
 对于特定插件可以通过`[plugins.id]`进行独立配置
 
-![](./src/cri-o_containerd/containerd-config.png)
+![](./src/cri-o-containerd/containerd-config.png)
 
 可以借助其插件系统和组件化设计进行拓展，对CRI-plugin 进行改造来进行容器类型的选择，并为 WebAssembly 实现所需的 service 等组件。
 
@@ -133,7 +133,7 @@ containerd以插件的方式来保证其内部实现的低耦合性，稳定性�
 
 单独的二进制程序，用于将 cri 请求转为对 dockerd 的请求。不作考虑。
 
-![](./src/cri-o_containerd/why-no-cri-dockerd.png)
+![](./src/cri-o-containerd/why-no-cri-dockerd.png)
 
 ## crictl
 
@@ -141,4 +141,4 @@ containerd以插件的方式来保证其内部实现的低耦合性，稳定性�
 
 提供 Cli 工具用于访问 CRI 兼容的容器运行时。
 
-![](./src/cri-o_containerd/containerd-ctl.png)
+![](./src/cri-o-containerd/containerd-ctl.png)

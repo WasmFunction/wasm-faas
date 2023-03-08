@@ -25,13 +25,13 @@ func New(ctx context.Context, config *srvconfig.Config) (*Server, error)
 
    1. 加载插件信息，依照插件依赖关系，对初始化顺序进行排序
 
-      ![](./src/containerd_cri_init/containerd_plugins.png)
+      ![](./src/containerd-cri-init/containerd_plugins.png)
 
    2. 初始化 TTRPC server, GRPC server 和 TCP server
 
-      ![](./src/containerd_cri_init/containerd_sockets.png)
+      ![](./src/containerd-cri-init/containerd_sockets.png)
 
-      ![](./src/containerd_cri_init/address_config.png)
+      ![](./src/containerd-cri-init/address_config.png)
 
       TCP server 与 GRPC server 配置相同，只多了 TLS 安全加密。tcp server 默认不开启
 
@@ -72,9 +72,9 @@ func New(ctx context.Context, config *srvconfig.Config) (*Server, error)
 
 ## CRI 插件
 
-![](./src/containerd_cri_init/cri_components.png)
+![](./src/containerd-cri-init/cri_components.png)
 
-![](./src/containerd_cri_init/containerd_init.png)
+![](./src/containerd-cri-init/containerd_init.png)
 
 ```go
 // Register CRI service plugin
@@ -135,7 +135,7 @@ func NewCRIService(config criconfig.Config, client *containerd.Client, nri *nri.
 6. 初始化 cniNetConfMonitor，用于监听 CNI 网络插件配置变化并重新加载插件
 7. 初始化 NRI (Node Resource Interface) ，用于通过 NRI 直接和容器打交道
 
-![](./src/containerd_cri_init/cri_routines.png)
+![](./src/containerd-cri-init/cri_routines.png)
 
 ### event monitor
 
