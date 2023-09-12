@@ -26,7 +26,7 @@
 
 使用沙盒API实现wasm沙盒，优化containerd的CRI沙盒处理
 
-- [kuasar-io/kuasar: A multi-sandbox container runtime that provides cloud-native, all-scenario multiple sandbox container solutions. (github.com)](https://github.com/kuasar-io/kuasar)
+- [Youtirsin/kuasar: A multi-sandbox container runtime that provides cloud-native, all-scenario multiple sandbox container solutions. (github.com)](https://github.com/Youtirsin/kuasar/tree/wasmkeeper)
 
 
 
@@ -34,7 +34,15 @@
 
 kuasar的核心强依赖，containerd shim的task，shim等的rust实现。
 
-- [kuasar-io/rust-extensions: Rust crates to extend containerd (github.com)](https://github.com/kuasar-io/rust-extensions)
+- [Youtirsin/rust-extensions: Rust crates to extend containerd (github.com)](https://github.com/Youtirsin/rust-extensions)
+
+
+
+**containerd (kuasar enabled)**
+
+使用kuassar的sandbox api的containerd
+
+- [Youtirsin/containerd at kuasar20230620 (github.com)](https://github.com/youtirsin/containerd/tree/kuasar20230620)
 
 
 
@@ -50,7 +58,7 @@ kuasar的核心强依赖，containerd shim的task，shim等的rust实现。
 
 使用runwasi的方案，但尝试剥离OCI镜像，减少containerd部分不必要处理环节。目前暂时停用
 
-- https://github.com/leviyanx/containerd.git
+- [leviyanx/containerd at wasm_container (github.com)](https://github.com/leviyanx/containerd/tree/wasm_container)
 
 
 
