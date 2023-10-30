@@ -2,7 +2,11 @@
 
 基于WebAssembly的容器技术研究项目系统的构建与部署。
 
+*这个文档可能不是最新版，最新版请参考：*
 
+- [WasmFunction/K8s-files: Files used by the whole Kubernetes setup and other stuff. (github.com)](https://github.com/WasmFunction/K8s-files)
+
+*下的`how-to-setup.md`。*
 
 ## Kubernetes
 
